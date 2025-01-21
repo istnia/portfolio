@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bookshelf App</title>
+		<!-- My Own CSS -->
+        <link rel="stylesheet" href="styles.css" />
+		<!-- Google Font -->	
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<header class="jumbotron">
+			<nav class="nav-list">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#addBook">Add Book</a></li>
+                    <li><a href="#unfinishedList">Unfinished List</a></li>
+                    <li><a href="#finishedList">Finished List</a></li>
+                </ul>
+            </nav>
+			<div id="home" class="cover">
+				<h1>Bookshelf App</h1>
+				<blockquote> 
+					"There is no friend as loyal as a book."
+					<cite>— Ernest Hemingway</cite>
+			</div>
+		</header>
+
+		<main>
+			<section id="findBook" class="find-book">
+				<h2>Search Book</h2>
+				<form id="searchBook" class="search-section" data-testid="searchBookForm">
+					<label for="searchBookTitle">Title</label>
+					<input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+					<button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">
+						Search
+					</button>
+				</form>
+			</section>
+
+			<section id="addBook" class="add-book">
+				<h2>Add Book</h2>
+				<form id="bookForm" data-testid="bookForm">
+					<div class="input-section">
+						<label for="bookFormTitle">Title</label>
+						<input id="bookFormTitle" type="text" required data-testid="bookFormTitleInput" />
+					</div class="input-section">
+					<div class="input-section">
+						<label for="bookFormAuthor">Author</label>
+						<input id="bookFormAuthor" type="text" required data-testid="bookFormAuthorInput" />
+					</div>
+					<div class="input-section">
+						<label for="bookFormYear">Year</label>
+						<input id="bookFormYear" type="number" required data-testid="bookFormYearInput" />
+					</div>
+					<div class="check">
+						<label for="bookFormIsComplete">Finished Reading</label>
+						<input
+						id="bookFormIsComplete"
+						type="checkbox"
+						data-testid="bookFormIsCompleteCheckbox"
+						/>
+					</div>
+					<button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
+						Add into <span>Reading List</span>
+					</button>
+				</form>
+			</section>
+
+			<section id ="unfinishedList" class="container">
+				<h2 class="container-header">Reading List: Unfinished</h2>
+				<div id="incompleteBookList" class="list-item" data-testid="incompleteBookList">
+				<!-- 
+					Ini adalah struktur HTML untuk masing-masing buku.
+					Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+				-->
+				<!-- <div data-bookid="123123123" data-testid="bookItem">
+					<h3 data-testid="bookItemTitle">Judul Buku 1</h3>
+					<p data-testid="bookItemAuthor">Penulis: Penulis Buku 1</p>
+					<p data-testid="bookItemYear">Tahun: 2030</p>
+					<div>
+					<button data-testid="bookItemIsCompleteButton">Finished</button>
+					<button data-testid="bookItemDeleteButton">Delete</button>
+					<button data-testid="bookItemEditButton">Edit</button>
+					</div>
+				</div> -->
+				</div>
+			</section>
+
+			<section id="finishedList" class="container">
+				<h2 class="container-header">Reading List: Finished</h2>
+				<div id="completeBookList" class="list-item" data-testid="completeBookList">
+				<!-- 
+					Ini adalah struktur HTML untuk masing-masing buku.
+					Pastikan susunan elemen beserta atribut data-testid menyesuaikan seperti contoh ini.
+				-->
+				<!-- <div data-bookid="456456456" data-testid="bookItem">
+					<h3 data-testid="bookItemTitle">Judul Buku 2</h3>
+					<p data-testid="bookItemAuthor">Penulis: Penulis Buku 2</p>
+					<p data-testid="bookItemYear">Tahun: 2030</p>
+					<div>
+					<button data-testid="bookItemIsCompleteButton">Finished</button>
+					<button data-testid="bookItemDeleteButton">Delete</button>
+					<button data-testid="bookItemEditButton">Edit</button>
+					</div>
+				</div> -->
+				</div>
+			</section>
+			<!-- Impor script -->
+			<script src="main.js" type="text/javascript"></script>
+		</main>
+  	</body>
+</html>
